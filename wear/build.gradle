@@ -2,13 +2,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 20
-    buildToolsVersion '22.0.1'
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "de.smart_sense.tracker"
-        minSdkVersion 20
-        targetSdkVersion 20
+        minSdkVersion 23
+        targetSdkVersion 23
         versionCode 24
         versionName "0.24"
     }
@@ -23,8 +23,9 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.google.android.support:wearable:+'
-    compile 'com.google.android.gms:play-services-wearable:+'
-    compile "com.android.support:support-v4:20.0.+"
+    provided 'com.google.android.wearable:wearable:1.0+'
+    compile 'com.google.android.support:wearable:1.0.+'
+    compile 'com.google.android.gms:play-services-wearable:11.0.+'
+    //compile "com.android.support:support-v4:23.+"
     compile project(':loggingBackend')
 }
